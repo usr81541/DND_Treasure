@@ -70,7 +70,6 @@ public class Main {
     }
 
     private static void parseCoins(ArrayList<Player> players, Purse purse, Coin coin) {
-        int count = players.size();
         int limit;
 
         switch (coin) {
@@ -94,11 +93,10 @@ public class Main {
                     for (int i = 0; i < limit; i++) {
                         players.get(i).addPlatinum(1);
                         purse.subtractPlatinum(1);
-//                        count--;
                     }   // at the end of this loop, purse.platinum should equal zero
 
                     // Give out 10 gold to each remaining player for the missing platinum
-                    for (int i = limit; i < count; i++) {
+                    for (int i = limit; i < players.size(); i++) {
                         players.get(i).addGold(10);
                         purse.subtractGold(10);
                     }
@@ -124,11 +122,10 @@ public class Main {
                         for (int i = 0; i < limit; i++) {
                             players.get(i).addGold(1);
                             purse.subtractGold(1);
-//                            count--;
                         }   // at the end of this loop purse.gold should equal 0
 
                         // Give out 2 electrum to each remaining player for the missing gold
-                        for (int i = limit; i < count; i++) {
+                        for (int i = limit; i < players.size(); i++) {
                             players.get(i).addElectrum(2);
                             purse.subtractElectrum(2);
                         }
@@ -139,11 +136,10 @@ public class Main {
                         for (int i = 0; i < limit; i++) {
                             players.get(i).addGold(1);
                             purse.subtractGold(1);
-//                            count--;
                         }
 
                         // Give out 10 silver to each remaining player for the missing gold
-                        for (int i = limit; i < count; i++) {
+                        for (int i = limit; i < players.size(); i++) {
                             players.get(i).addSilver(10);
                             purse.subtractSilver(10);
                         }
@@ -170,11 +166,10 @@ public class Main {
                     for (int i = 0; i < limit; i++) {
                         players.get(i).addElectrum(1);
                         purse.subtractElectrum(1);
-//                        count--;
                     }   // at the end of this loop purse.electrum should equal 0
 
                     // Give out 5 silver to each remaining player for the missing electrum
-                    for (int i = limit; i < count; i++) {
+                    for (int i = limit; i < players.size(); i++) {
                         players.get(i).addSilver(5);
                         purse.subtractSilver(5);
                     }
@@ -200,11 +195,10 @@ public class Main {
                     for (int i = 0; i < limit; i++) {
                         players.get(i).addSilver(1);
                         purse.subtractSilver(1);
-//                        count--;
                     }   // at the end of this loop purse.silver should equal 0
 
                     // Give out 10 copper to each remaining player for the missing silver
-                    for (int i = limit; i < count; i++) {
+                    for (int i = limit; i < players.size(); i++) {
                         players.get(i).addCopper(10);
                         purse.subtractCopper(10);
                     }
