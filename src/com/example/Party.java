@@ -18,7 +18,7 @@ public class Party {
             boolean run = true;
 
             // Get player list
-            do {
+            while (run) {
                 System.out.print("Enter new player's name: ");
                 String name = scanner.nextLine();
                 party.add(new Player(name));
@@ -31,7 +31,7 @@ public class Party {
                     System.out.println();
                     run = false;
                 }
-            } while (run);
+            }
         }
     }
 
