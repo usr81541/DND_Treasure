@@ -5,7 +5,7 @@
   <TabInfoArray Name="TabInfoArray">
     <TabInfo>
       <wxString Value="C:\DND_Treasure\DivideTreasure\main.cpp" Name="FileName"/>
-      <int Value="42" Name="FirstVisibleLine"/>
+      <int Value="60" Name="FirstVisibleLine"/>
       <int Value="104" Name="CurrentLine"/>
       <wxArrayString Name="Bookmarks"/>
       <IntVector Name="CollapsedFolds"/>
