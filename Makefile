@@ -1,8 +1,8 @@
 .PHONY: clean All
 
 All:
-	@echo "----------Building project:[ DivideTreasure - Debug ]----------"
-	@cd "DivideTreasure" && "$(MAKE)" -f  "DivideTreasure.mk"
+	@echo "----------Building project:[ EnhancedDivideTreasure - Debug ]----------"
+	@cd "EnhancedDivideTreasure" && "$(MAKE)" -f  "EnhancedDivideTreasure.mk"
 clean:
-	@echo "----------Cleaning project:[ DivideTreasure - Debug ]----------"
-	@cd "DivideTreasure" && "$(MAKE)" -f  "DivideTreasure.mk" clean
+	@echo "----------Cleaning project:[ EnhancedDivideTreasure - Debug ]----------"
+	@cd "EnhancedDivideTreasure" && "$(MAKE)" -f  "EnhancedDivideTreasure.mk" clean
