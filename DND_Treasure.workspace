@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <CodeLite_Workspace Name="DND_Treasure" Database="" Version="10000">
-  <Project Name="DivideTreasure" Path="DivideTreasure/DivideTreasure.project" Active="No"/>
-  <Project Name="EnhancedDivideTreasure" Path="EnhancedDivideTreasure/EnhancedDivideTreasure.project" Active="Yes"/>
+  <Project Name="DivideTreasure" Path="DivideTreasure/DivideTreasure.project" Active="Yes"/>
+  <Project Name="EnhancedDivideTreasure" Path="EnhancedDivideTreasure/EnhancedDivideTreasure.project" Active="No"/>
   <BuildMatrix>
     <WorkspaceConfiguration Name="Debug" Selected="yes">
       <Environment/>

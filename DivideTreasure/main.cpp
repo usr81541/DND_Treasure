@@ -14,15 +14,15 @@ Purse getPurse () {
     Purse commonPurse;
     
     cout << "Enter the purse contents\n";
-    cout << "Platinum: ";
+    cout << "Platinum:\t";
     cin >> commonPurse.platinum;
-    cout << "Gold: ";
+    cout << "Gold:\t\t";
     cin >> commonPurse.gold;
-    cout << "Electrum: ";
+    cout << "Electrum:\t";
     cin >> commonPurse.electrum;
-    cout << "Silver: ";
+    cout << "Silver:\t\t";
     cin >> commonPurse.silver;
-    cout << "Copper: ";
+    cout << "Copper:\t\t";
     cin >> commonPurse.copper;
     
     return commonPurse;
@@ -106,6 +106,13 @@ int main() {
 
     cout << "\nThe common purse now contains...\n";
     displayContents(remainingPurse);
+    
+    cout << "\nTotal removed from common purse: " << endl;
+    cout << "Platinum:\t" << commonPurse.platinum - remainingPurse.platinum << endl;
+    cout << "Gold:\t\t" << commonPurse.gold - remainingPurse.gold << endl;
+    cout << "Electrum:\t" << commonPurse.electrum - remainingPurse.electrum << endl;
+    cout << "Silver:\t\t" << commonPurse.silver - remainingPurse.silver << endl;
+    cout << "Copper:\t\t" << commonPurse.copper - remainingPurse.copper << endl;
     
     system("pause");
     
