@@ -1,0 +1,17 @@
+{
+  "Party 1": {
+    "Characters": [
+      "Caldazar",
+      "El Condor",
+      "Kholwin",
+      "Raith"
+    ],
+    "Purse": {
+      "Platinum": 0,
+      "Gold": 0,
+      "Electrum": 0,
+      "Silver": 0,
+      "Copper": 0
+    }
+  }
+}

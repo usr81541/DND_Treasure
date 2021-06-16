@@ -1,8 +1,13 @@
 #include <iostream>
 #include <string>
 #include <vector>
+#include <fstream>
+#include <sstream>
+#include <json.hpp>
+#include <iomanip>
 
 using namespace std;
+using json = nlohmann::json;
 
 /*****************************************************************
 * Enum class to hold the different coin types
@@ -342,19 +347,29 @@ void dividePurse(vector<Player>& party, Purse& purse) {
 int main() {
     Purse c_purse;              // Common purse
     vector<Player> party;       // Party vector
-    string input;               // Placeholder for user input
+    string input = "N";               // Placeholder for user input
+    ifstream infile ("data.json");  // load data file
 
-    cout << "Custom Party? [Y/N]:\t";
-    getline(cin, input);
+    json j;
+    infile >> j;
 
-    // Custom party input
-    if(input.front() == 'y' || input.front() == 'Y') {
-        party = initParty(false);
+    while (input.front() != 'y' && input.front() != 'Y') {
+      cout << "Choose a party:\n\n";
+      for (auto& element : j) {
+        cout << "\t" << element.key() << endl;
+
+        for(auto& item : element["Characters"]) {
+          cout << "\t\t" << item << endl;
+        }
+
+        cout << endl << "Select this party? [Y/N]:\t";
+        cin >> input;
+
+        if (input.front() == 'y' || input.front() == 'Y') {
+          break;
+        }
     }
-    // Standard party input
-    else {
-        party = initParty(true);
-    }
+  }
 
     // Get common purse value
     cout << "Enter common purse value:" << endl;
