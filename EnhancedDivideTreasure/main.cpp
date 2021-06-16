@@ -354,11 +354,15 @@ int main() {
     infile >> j;
 
     while (input.front() != 'y' && input.front() != 'Y') {
+      if (!party.empty()) {
+        party.clear();
+      }
       cout << "Choose a party:\n\n";
-      for (auto& element : j) {
-        cout << "\t" << element.key() << endl;
+      for (auto& el : j.items()) {
+        cout << "\t" << el.key() << endl;
 
-        for(auto& item : element["Characters"]) {
+        for(auto& item : el.value()["Characters"]) {
+          party.push_back(Player(item));
           cout << "\t\t" << item << endl;
         }
 
